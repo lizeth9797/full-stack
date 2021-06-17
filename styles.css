@@ -21,19 +21,15 @@ p{
     margin-right: 20px; */
     margin: 40px 20px 0 20px;
     font-size: 0;
-    line-height: 45px; 
 }  
 
-li{
-    display: inline;
-}
 
 .header > * {  /*esa funcion es para indicarle que engloba a los hijos de header*/
     display: inline-block;
     font-size: 16px;
     vertical-align: middle;
     height: 100%;
-    line-height: 45px; 
+    line-height: 45px;
     font-family: sans-serif;
 } 
 
@@ -47,17 +43,22 @@ li{
 }
 
 .navbar > * {
-    padding: 0 25px 0 25px;
     color: #025157;
+}
+
+.navbar li{
+    margin: 0 25px 0 25px;
+    display: inline;
 }
 
 .actions{
     width: 15%;
     text-align: left;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .actions > * {
-    font-size: 14px;
     margin: 0 10px 0 10px;
 }
 .actions a{
