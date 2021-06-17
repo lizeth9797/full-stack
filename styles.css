@@ -1,6 +1,6 @@
 body{
     background-color: #fffbf7;
-    background-image: url('https://i.pinimg.com/originals/20/fa/77/20fa773230f669fb2295f9eaf1a9a51e.png');
+    /*background-image: url('https://i.pinimg.com/originals/20/fa/77/20fa773230f669fb2295f9eaf1a9a51e.png');*/
 }
 
 h1{
@@ -14,7 +14,60 @@ p{
     color: #8b8b8bcc;
 }
 
-button{
+ 
+.header{
+    /* margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px; */
+    margin: 40px 20px 0 20px;
+    font-size: 0;
+    line-height: 45px; 
+}  
+
+li{
+    display: inline;
+}
+
+.header > * {  /*esa funcion es para indicarle que engloba a los hijos de header*/
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+    height: 100%;
+    line-height: 45px; 
+    font-family: sans-serif;
+} 
+
+.logo{
+    width: 15%;
+}
+
+.navbar{
+    width: 70%;
+    text-align: left;
+}
+
+.navbar > * {
+    padding: 0 25px 0 25px;
+    color: #025157;
+}
+
+.actions{
+    width: 15%;
+    text-align: left;
+}
+
+.actions > * {
+    font-size: 14px;
+    margin: 0 10px 0 10px;
+}
+.actions a{
+    color: #67b54b;
+}
+
+.actions button{
     color: #fff;
-    background-color: #025157;
+    background-color: #67b54b;
+    padding: 12px 14px 12px 14px;
+    border: none;
+    border-radius: 5px;
 }
