@@ -14,7 +14,18 @@ p{
     color: #8b8b8bcc;
 }
 
- 
+.fidex-header{
+    position: fixed;
+    background-color: #fffbf7;
+    top: 0; 
+    left: 0;
+    right: 0;
+}
+
+  main {
+  margin-top: 150px;
+  //text-align: center;
+} 
 .header{
     /* margin-top: 40px;
     margin-left: 20px;
@@ -75,10 +86,27 @@ p{
 
 .promo{
     display: flex;
+    width: 70%;
+    margin: 100px auto;
+    align-items: center;
 }
+
+.video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.video img{
+    width: 150px;
+    margin-top: 15px;
+} 
+ 
 .publish {
     /* container styles if any */
-  }
+ }
+
 .publish h2 {
     font-family: "Alegreya", serif;
     font-size: 40px;
