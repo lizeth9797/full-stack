@@ -14,6 +14,11 @@ p{
     color: #8b8b8bcc;
 }
 
+button{
+    color: #fff;
+    background-color: #025157;
+}
+
 .fidex-header{
     position: fixed;
     background-color: #fffbf7;
@@ -22,64 +27,66 @@ p{
     right: 0;
 }
 
-  main {
-  margin-top: 150px;
-  //text-align: center;
+/* Se hizo una prueba. Se agregó un "." al inicio de la clase y esto provocó que el html no la reconociera, entonces en el HTML se tuvo que especificar class="main" para que la tomara. Por lo tanto se quito el punto para no tener que escribir la clase en el HTML */
+main{  
+    margin-top: 130px;
 } 
+
 .header{
     /* margin-top: 40px;
     margin-left: 20px;
     margin-right: 20px; */
     margin: 40px 20px 0 20px;
     font-size: 0;
+    height: 100%;
 }  
 
-
-.header > * {  /*esa funcion es para indicarle que engloba a los hijos de header*/
+.header > * {  /*esa funcion es para indicarle que engloba a todos los hijos directos de header*/
     display: inline-block;
     font-size: 16px;
     vertical-align: middle;
-    height: 100%;
-    line-height: 45px;
+    /*Todos los textos dentro de la barra de navegación deben usar la fuente sans-serif y el alto de la barra debe ser de 45px. */
     font-family: sans-serif;
+    line-height: 45px; 
 } 
 
 .logo{
     width: 15%;
 }
 
-.navbar{
+.navbar {
     width: 70%;
     text-align: left;
-}
-
-.navbar > * {
-    color: #025157;
 }
 
 .navbar li{
     margin: 0 25px 0 25px;
     display: inline;
+    color: #025157;
+
+    /* El texto del menú de navegación debe tener una separación a los costados de 25px, además debe ser del color #025157 */
 }
 
 .actions{
     width: 15%;
     text-align: left;
     font-weight: 600;
-    font-size: 14px;
+     font-size: 14px; /*El tamaño de fuente para las acciones debe ser de 14px*/
 }
 
 .actions > * {
     margin: 0 10px 0 10px;
+    /*cada una de las acciones debe tener una separación hacia los lados de 10px*/
 }
 .actions a{
-    color: #67b54b;
+     color: #67b54b;  /*El color del texto Sign In debe ser #67b54b */
 }
 
 .actions button{
+    /*debe tener color de texto blanco, color de fondo #67b54b, un relleno de 14px hacia los costados y 12px en la parte inferior y superior. Por último el botón no debe tener borde, pero un radio de borde de 5px para tener esquinas redondeadas.*/
     color: #fff;
     background-color: #67b54b;
-    padding: 12px 14px 12px 14px;
+    padding: 12px 14px 12px 14px; 
     border: none;
     border-radius: 5px;
 }
@@ -107,81 +114,148 @@ p{
     /* container styles if any */
  }
 
-.publish h2 {
+.publish  h2 {
     font-family: "Alegreya", serif;
     font-size: 40px;
     line-height: 48px;
+    font-weight: bold;
     color: #025157;
-  }
+}
   
-  .publish > p {
+.publish > p {
     font-size: 16px;
     color: #343434;
     line-height: 1.5;
     margin-bottom: 20px;
-  }
+}
   
-  .publish > form {
+.publish > form {
     display: flex;
-  }
+}
   
-  .publish > form p {
+.publish > form p {
     color: #025157;
     margin-right: 18px;
-  }
-
-.publish > img{
-    width: 500px;
 }
 
-.publish > button{
-    background-color: #025157;
-    color: #fff;
-    padding: 12px 14px 12px 14px;
-    border: none;
-    border-radius: 5px;
-}
-
-.gsection{
-    display: flex;
-    align-items: center;
+/*Postwork 3*/
+.studyc{
+    padding: 30px 0;
     background-color: #a1d683;
+   /*  display: flex;
+    align-items: center;
+    justify-content: space-around; */
 }
 
-
-.cases{
+.studyu{
     display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: 100px auto;
+    width: 80%;
+    margin: 0 auto;
+    gap:80px;
     align-items: center;
 }
 
-.cases h2 {
+.brands{
+}
+
+.brands > h2 {
     font-family: "Alegreya", serif;
     font-size: 40px;
     line-height: 48px;
+    font-weight: bold;
     color: #025157;
-  }
+}
   
-.cases > p {
+.brands > p {
     font-size: 16px;
     color: #343434;
     line-height: 1.5;
-    margin-bottom: 20px;
-  }
-
-.cases > img{
-    width: 100px;
 }
 
-.cases > button{
+.brands > button{
     background-color: #025157;
     color: #fff;
     padding: 12px 14px 12px 14px;
     border: none;
     border-radius: 5px;
+    display: block;
 }
+
+.brands > img{
+    margin-top: 30px;
+    width: 450px;
+}
+
+.cases{
+   /*  display: flex;
+    flex-direction:column; */
+    position: relative;
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.cases > img{
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.profiles-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #f9da73;
+    bottom: -20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    right:20px;
+    top:200px;
+}
+
+.profiles-logo >img {
+    max-width: 75%;
+}
+
+.card{
+    padding: 20px;
+}
+.card > h4{
+    color: #025157;
+    font-size: 15px;
+}
+.card > h3{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.card > button{
+    background-color: #025157;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.percent{
+    display: flex;
+    align-items: center;
+}
+
+.percent > img{
+    margin-right: 25px;
+    width: 26px;
+    height: 26px;
+}
+
+
+
+
+
+
 
 
 /*Clase 4*/

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <!-- Aquí va información importante pero no visible dentro del navegador, por ejemplo  el título de la página, el ícono, si debe de importar algún estilo que personalice la apariencia de nuestro contenido, información de la descripción de la página para que se muestren en los resultados de búsqueda de internet, etc -->
   <head>
     <meta charset="=UTF-8"  >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,16 @@
   </head>
 
   <body>
+    <!-- INICIO DE HEADER -->
     <section class="fidex-header">
       <header class="header">
-
-        <a href="./index.html" class="logo">
+        <!-- el elemento "a" crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL -->
+        <a href="./" class="logo">
+          <!-- alternativo "alt" sirve para describir la imagen, en caso de que no se pueda mostrar, aparecerá esa descripción, por ej si no se encuentra el archivo o en conexión lenta -->
           <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg" alt="logo-en-menu">
-        </a>
+        </a> 
 
+       <!-- Menú de navegación -->
         <nav class="navbar">
           <ul class="ul">
             <li>Products</li>
@@ -27,6 +31,7 @@
           </ul>
         </nav>
 
+        <!-- Contenedor de acciones de usuario -->
         <div class="actions">
           <a href="./login.html"> Sign In</a>
           <button>Start free trial</button>
@@ -34,30 +39,34 @@
 
       </header>
     </section>
+    <!-- FIN DE HEADER -->
 
-    <main>
-      <img alt="logo de matcha" src="https://getmatcha.com/wp-content/themes/getmatcha/img/capterra.png" />
+    <!-- El elemento main representa el contenido dominante de un documento, no debe aparecer más de 1 ocación, a menos que tenga el atributo hidden -->
+    <main >
       <h1>Mi primer etiqueta</h1>
       <h2>Mi segunda etiqueta</h2>
       <h3>Mi tercera etiqueta</h3>
       <h4>Mi cuarta etiqueta</h4>
       <h5>Mi quinta etiqueta</h5>
       <h6>Mi sexta etiqueta</h6>
+      
 
-      <p>Lorem Ipsum <b>es simplemente el texto</b> de relleno <br> las imprentas y archivos de texto. </p>
-
-      <form action="">
+      <p>Start publishing today with a <b> free 7-day trial.</b><br><b>No credit card</b> required.</p>
+        <form action=""> <!-- el actions sería para indicar lo que hará, con ayuda del JS -->
           <label for="name">Nombre</label>
-          <input type="text" id="name" name="fname"><br><br>
+          <!-- el id permitirá idetificarlo en el JS -->
+          <input type="text" id="name" name="name"><br><br>
           <input type="text" id="lastname" name="lastname" placeholder="Apellido"><br><br>
           <input type="number" id="age" name="age" placeholder="Edad" min="18" max="35"><br><br>
           <input type="email" id="email" required name="email" placeholder="Correo"><br><br>
           <input type="password" id="password" name="password" placeholder="Contraseña"><br><br>
           <button type="submit">Enviar &#x261D;</button>
-      </form>
+        </form>
+        <br>
+        <img alt="logo de matcha" src="https://getmatcha.com/wp-content/themes/getmatcha/img/capterra.png" />  
     </main>
     
-    
+    <!-- SECCION DE VIDEO -->
     <section class="promo">
       <div class="video">
         <video controls poster="https://cdn.videvo.net/videvo_files/video/premium/video0036/thumbnails/computer_code00_small.jpg">
@@ -82,36 +91,41 @@
       </article>
     </section>
 
- 
+    <!-- POSTWORK 3 -->
+    <section class="studyc">
+      <div class="studyu">
 
-    <section class="gsection">
-        <article class="cases">
+        <article class="brands">
           <h2>Growing ecommerce brands rely on Matcha.</h2>
           <p>Are you tired of wasting time publishing blog articles to only see a trickle of traffic and no impact on sales? Join hundreds of business owners and ecommerce marketers who rely on Matcha for quality content and consistent performance from their blogs.</p>
-          <button>Who Uses Matcha?</button>
-  
-            <img src="https://getmatcha.com/wp-content/uploads/2019/09/brands_group.png" alt="Brands">
+          <button><b>Who Uses Matcha?</b></button>
+          <img src="https://getmatcha.com/wp-content/uploads/2019/09/brands_group.png" alt="Brands">
         </article>
 
-        <article class="publish">
-          <h2>Growing ecommerce brands rely on Matcha.</h2>
-          <p>Are you tired of wasting time publishing blog articles to only see a trickle of traffic and no impact on sales? Join hundreds of business owners and ecommerce marketers who rely on Matcha for quality content and consistent performance from their blogs.</p>
-          <button>Who Uses Matcha?</button>
-  
-          <div>
+        <div class="cases">
+          <img src="https://getmatcha.com/wp-content/uploads/2019/06/matt-and-margaret_headshot.png" alt="historia de usuario">
+
+          <!-- circulo -->
+          <div class="profiles-logo">
+            <img src="https://getmatcha.com/wp-content/uploads/2019/06/mambe-logo-1.png" alt="Mambe">
           </div>
-            <img src="https://getmatcha.com/wp-content/uploads/2019/09/brands_group.png" alt="Brands">
-        </article> 
 
- <!--        <article class="partners">
-          <h2>Growing ecommerce brands rely on Matcha.</h2>
-          <p>Are you tired of wasting time publishing blog articles to only see a trickle of traffic and no impact on sales? Join hundreds of business owners and ecommerce marketers who rely on Matcha for quality content and consistent performance from their blogs.</p>
-          <button>Who Uses Matcha?</button>
-          <img src="https://getmatcha.com/wp-content/uploads/2019/09/brands_group.png" alt="Brands">
-  
-        </article> -->
+          <article class="card">
+              <h4>Mambe Waterproof Blankets<h4>
+              <h3>How Mambe Increased Conversions by 327%, Reduced CPL by 60%</h3>
+
+              <div class="percent">
+                <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_target.png" alt="Target icon">
+                <p>+327% more popup conversions at a 60% lower cost</p>
+              </div> 
+              <button>See Case Study</button>
+          </article>
+          
+          </div>
 
 
+
+      </div>
     </section>
    
 
