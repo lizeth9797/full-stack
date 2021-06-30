@@ -4,7 +4,8 @@ body{
 }
 
 h1{
-    color: aqua;
+    color: #025157;
+    font-family: "Alegreya", serif;
 }
 h2{
     color: #46484c;
@@ -29,7 +30,8 @@ button{
 
 /* Se hizo una prueba. Se agregó un "." al inicio de la clase y esto provocó que el html no la reconociera, entonces en el HTML se tuvo que especificar class="main" para que la tomara. Por lo tanto se quito el punto para no tener que escribir la clase en el HTML */
 main{  
-    margin-top: 130px;
+    margin-top: 285px;
+    text-align: center; 
 } 
 
 .header{
@@ -112,12 +114,13 @@ main{
  
 .publish {
     /* container styles if any */
+    margin-left: 20px;
  }
 
 .publish  h2 {
     font-family: "Alegreya", serif;
     font-size: 40px;
-    line-height: 48px;
+    line-height: 48px; 
     font-weight: bold;
     color: #025157;
 }
@@ -131,6 +134,7 @@ main{
   
 .publish > form {
     display: flex;
+   // flex-direction: column;
 }
   
 .publish > form p {
@@ -318,3 +322,79 @@ main{
     height: 100%;
 }
 
+
+/*SESION 5*/
+/** dispositivos móviles en vista viewport (vertical) */
+@media (max-width: 575px) {
+    body{
+        background-color: #ccf7a9;
+    }
+    .navbar , .actions{
+        display: none;
+    }
+    h1{
+        font-size: 30px;
+    }
+    main{  
+        margin-top: 150px;
+    } 
+    .banner >img{
+        width: 100%;
+    }
+    .publish > form {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .publish > form > div {
+        height: 50px;
+        margin-top: 10px;
+    }
+    
+    .publish > form > div > input {
+        width: 65%;
+    }
+    .promo {
+        flex-direction: column;
+    }
+    .video > video {
+        width: 100%;
+    }
+    .publish {
+        margin-top: 10px;
+    }
+    
+    .publish > h2 {
+        font-size: 25px;
+        line-height: 1.2;
+    }
+    .features {
+        grid-template: repeat(4, 1fr) / 1fr;
+        padding-left: 0;
+        padding-right: 0;
+    }  
+    .feature-image {
+        display: none;
+    }
+  }
+  
+  /** dispositivos pequeños en vista landscape (horizontal) */
+  @media (min-width: 576px) and (max-width: 767px) {
+     
+  }
+  
+  /** dispositivos medianos (tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+     
+  }
+  
+  /** dispositivos grandes (desktops) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+     
+  }
+  
+  /** dispositivos extra grandes (monitores grandes, tvs) */
+  @media (min-width: 1200px) {
+     
+  }
+  
