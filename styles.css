@@ -56,18 +56,17 @@ main{
     width: 15%;
 }
 
-.navbar {
+/* .navbar {
     width: 70%;
     text-align: left;
-}
-
-.navbar li{
+} */
+    
+/* El texto del menú de navegación debe tener una separación a los costados de 25px, además debe ser del color #025157 */
+/* .navbar li{
     margin: 0 25px 0 25px;
     display: inline;
     color: #025157;
-
-    /* El texto del menú de navegación debe tener una separación a los costados de 25px, además debe ser del color #025157 */
-}
+} */
 
 .actions{
     width: 15%;
@@ -329,9 +328,9 @@ main{
     body{
         background-color: #ccf7a9;
     }
-    .navbar , .actions{
+    /* .navbar , .actions{
         display: none;
-    }
+    } */
     h1{
         font-size: 30px;
     }
