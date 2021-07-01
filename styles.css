@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya:900|Open+Sans|Slabo+27px&display=swap");
+
+
 body{
     background-color: #fffbf7;
     /*background-image: url('https://i.pinimg.com/originals/20/fa/77/20fa773230f669fb2295f9eaf1a9a51e.png');*/
@@ -133,7 +136,7 @@ main{
   
 .publish > form {
     display: flex;
-   // flex-direction: column;
+    //flex-direction: column;
 }
   
 .publish > form p {
@@ -222,19 +225,19 @@ main{
     max-width: 75%;
 }
 
-.card{
+.kard{
     padding: 20px;
 }
-.card > h4{
+.kard > h4{
     color: #025157;
     font-size: 15px;
 }
-.card > h3{
+.kard > h3{
     font-size: 25px;
     font-weight: 400;
 }
 
-.card > button{
+.kard > button{
     background-color: #025157;
     color: #fff;
     padding: 10px 20px;
@@ -321,6 +324,29 @@ main{
     height: 100%;
 }
 
+.card_bootstrap{
+    display: flex;
+
+}
+.carousel-inner{
+    max-height: 100%;
+    height: 550px;
+}
+.card_bootstrap{
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+
+}
+
+.card{
+    margin-top:5%;
+}
+
+.btn-success{
+    background-color: #ce9223;
+    color: black;
+    border-color: black;
+}
 
 /*SESION 5*/
 /** dispositivos móviles en vista viewport (vertical) */
