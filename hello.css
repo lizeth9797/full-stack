@@ -1,0 +1,51 @@
+/* ul {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    padding: 0 15px;
+  }
+  label {
+    display: block;
+  }
+  #flex {
+    display: flex;
+    flex-wrap: wrap;
+    height: 240px;
+    width: 240px;
+    border: 1px solid #000;
+    background: yellow;
+  }
+  #flex > div {
+    min-width: 60px;
+    min-height: 60px;
+    border: 1px solid #000;
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  #flex > .big {
+    font-size: 1.5em;
+    min-width: 70px;
+    min-height: 70px;
+  } */
+
+  .align-content {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 500px;
+    background: lightgray;
+    padding: 5px;
+  }
+  .box {
+    background: tomato;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }

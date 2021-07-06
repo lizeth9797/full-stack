@@ -1,0 +1,22 @@
+{
+  "name": "santanderfront",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizeth9797/full-stack.git"
+  },
+  "author": "karina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizeth9797/full-stack/issues"
+  },
+  "homepage": "https://github.com/lizeth9797/full-stack#readme",
+  "dependencies": {
+    "sass": "^1.35.1"
+  }
+}
