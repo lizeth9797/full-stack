@@ -1,12 +1,13 @@
-// app.js
-const $forms = document.querySelectorAll(".signup-form");
+const forms = document.querySelectorAll(".signup-form")
+
 
 const getTemplate = () => {
-  return fetch("./template.html").then((response) => response.text());
-};
+  return fetch("./template.html")
+    .then((response) => response.text())
+}
 
 const sendEmailToApi = (address, template) => {
-  fetch(`https://bedu-email-sender-api.herokuapp.com/send`, {
+  fetch(`https://bedu-email-sender-api.herokuapp.com/send?id`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -17,9 +18,13 @@ const sendEmailToApi = (address, template) => {
     }),
   })
     .then((results) => {
-      console.log(results);
+      console.log(results.status);
+      if(results.status == 200){
+        alert("E-mail send!!!")
+      } else {
+        alert("Send failed")
+      }
       document.getElementById("email").value = ""
-      alert("E-mail send!!!")
     })
     .catch((error) => {
       console.error(error);
@@ -28,18 +33,4 @@ const sendEmailToApi = (address, template) => {
     });
 };
 
-const sendEmail = (event) => {
-  event.preventDefault();
-  const email = event.target.querySelector("input").value;
-  getTemplate()
-    .then((template) => {
-      sendEmailToApi(email, template);
-    })
-    .catch((error) => {
-      console.log(error, "error al convertir el template.");
-    });
-};
-
-for (let i = 0; i < $forms.length; i++) {
-  $forms[i].addEventListener("submit", sendEmail);
 }
