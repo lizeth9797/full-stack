@@ -1,5 +1,10 @@
 const forms = document.querySelectorAll(".signup-form")
 
+// console.log(forms);
+
+// function suma(a, b) {
+//   return a + b
+// }
 
 const getTemplate = () => {
   return fetch("./template.html")
@@ -33,4 +38,24 @@ const sendEmailToApi = (address, template) => {
     });
 };
 
+function sendEmail(miVariable) {
+  miVariable.preventDefault()
+  const email = miVariable.target.querySelector("input").value
+  getTemplate()
+    .then((template) => {
+      sendEmailToApi(email, template)
+    })
+    .catch((error) => {
+      console.log(error, "error al obtener el template");
+    })
+}
+
+// const sendEmail = (miVariable) => {
+//   miVariable.preventDefault()
+//   console.log(miVariable);
+// }
+
+for(let i = 0; i < forms.length; i++){
+  // console.log(forms[i]);
+  forms[i].addEventListener("submit", sendEmail)
 }
