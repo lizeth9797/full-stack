@@ -49,3 +49,57 @@ console.log(greeting) */
     if (i%2 !== 0)
         console.log(i);
   }  */
+
+  
+//            ***** CLASE 3, Objetos y Arreglos     *****
+const numbers = [1, 3, 4, 7, 2, 1, 9, 0]
+
+const doubled = []
+
+/* for(let i = 0; i < numbers.length; i++) {
+  doubled.push(numbers[i] * 2);
+} */
+
+for (const number of numbers){
+  doubled.push(number*2);
+}
+//console.log(numbers); // [1, 3, 4, 7, 2, 1, 9, 0]
+//console.log(doubled);  // [2, 6, 8, 14, 4, 2, 18, 0]
+
+
+//Reto 01 
+//Dado el arreglo numbers compuesto solamente por números enteros mayores que cero, obtener el promedio de todos sus elementos.
+
+const numeros = [5, 3, 4, 7, 2, 1, 9, 7, 7]
+let x=0;
+for (let i=0; i<numeros.length;i++){
+  x+=numeros[i];
+}
+//console.log("Promedio:",x/numeros.length);
+
+// RETO 02
+const car = [['brand', 'Nissan'], ['model', 'Versa'], ['year', 2020]]
+const array={};
+
+for (const c of car){
+  array[c[0]]=c[1];
+}
+//console.log(array);
+
+
+// RETO 03
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  links: {
+    web: {
+      blog: 'https://johndoe.com'
+    }, 
+    social: {
+      facebook: 'https://facebook.com/john.doe',
+      instagram: 'https://instagram.com/john.doe'
+    } 
+  }
+}
+const {facebook:fb, instagram:ig}=person.links.social;
+console.log(fb,ig)
