@@ -102,4 +102,51 @@ const person = {
   }
 }
 const {facebook:fb, instagram:ig}=person.links.social;
-console.log(fb,ig)
+//console.log(fb,ig)
+
+
+//CLASE 4 RETO 01
+function power(base,exponent) {
+  let re=1;
+  for (let i=0; i<exponent; i++){
+    re*= base;
+  }
+  console.log(re);
+}
+//power(2,3);
+
+
+//RETO 02
+//Completar la función getLargerInt la cual recibe dos números enteros. La función debe retornar el número mayor.
+
+function getLergerInt(number1, number2) {
+  if((number1&&number2)>0){
+    return number1>number2? number1:number2; 
+  }
+  else{
+    console.log("No son numeros enteros");  
+  }
+}
+//console.log(getLergerInt(8,9));
+
+let arreglo=[1];
+function fibo(x){
+  if(x==1){
+    console.log(arreglo);
+  }else if(x==2){
+    arreglo.push(1);
+    console.log(arreglo);
+  }else{
+    
+  }
+
+  
+}
+
+fibo(2);
+
+
+
+
+
+
