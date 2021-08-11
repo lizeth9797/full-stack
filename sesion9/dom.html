@@ -1,0 +1,36 @@
+<!-- /* ----------------
+Creando nodos y agregando texto
+----------------
+*/ -->
+
+<body>
+    <h1>Document Object Model</h1>
+    <p class="subtitle">Hello World!</p>
+    <p>Here is a
+      <a href="#">link</a>
+    </p>
+  
+    <script>
+      let x = document.createElement('h2').appendChild(document.createTextNode('hola'));
+      console.log(x); 
+
+
+      function createNode(type, child) {
+        const node = document.createElement(type);
+      
+        if(typeof child === "string") {
+          const text = document.createTextNode(child);
+          node.appendChild(text);
+        } else {
+            //console.log(child)
+          node.appendChild(child);
+        }
+      
+        return node;
+      }
+      
+      console.log(createNode('h1', createNode('strong', 'Hello World')));
+
+    </script>
+</body> 
+  

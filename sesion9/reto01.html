@@ -1,0 +1,47 @@
+<!-- /* ----------------
+RETO 01
+----------------
+Manipular el DOM creando nuevos nodos y reemplazándolos con existentes.
+Reemplazar todas las imágenes del documento (etiquetas <img/>) con el texto que contienen en el atributo alt.
+*/ -->
+
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Reto 1: Reemplazar Imágenes</title>
+  </head>
+  <body>
+    <h1>Images</h1>
+
+    <img src="https://picsum.photos/200/300" alt="First Image"/>
+    <!-- <img src="https://picsum.photos/200/300" alt="Second Image"/>
+    <img src="https://picsum.photos/200/300" alt="Third Image"/>
+ -->
+    <script>
+      const prueba=document.createElement('text')
+      const alter=document.getElementsByTagName('img')[0].alt
+      console.log(alter)
+      let prueba2=document.createTextNode(alter)
+      console.log(prueba2)
+      prueba.appendChild(prueba2)
+      console.log(prueba)
+      const imagen=document.querySelector('img')
+      console.log(imagen)
+      const remplazo= document.body.replaceChild(prueba,imagen)
+
+
+      /*function remplazar(){
+        for(let i=0;i<k;i++)
+
+
+
+      }
+
+      document.body.appendChild('alt')
+      document.al*/
+
+    </script>
+  </body>
+</html>
+
+
