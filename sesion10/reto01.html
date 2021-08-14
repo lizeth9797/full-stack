@@ -1,0 +1,42 @@
+<html>
+<head>
+  <meta charset="utf8"/>
+  <title>Reto 1: Inflar un globo</title>
+<!--   <link rel="stylesheet" href="./styles.css">
+ -->
+<style>
+    p{
+        font-size: 20px;
+        text-align: center;
+        padding-top: 150px;
+    }
+</style>
+
+</head>
+<body>
+
+<p>🎈</p>
+
+<script>
+    let p= document.querySelector('p');
+    let font_size=20;
+    
+    window.addEventListener("keydown", function x(event) {
+        if (event.key == 'ArrowUp' && font_size<80 ) {
+            font_size=(font_size*1.1)
+            p.style.fontSize=font_size+'px';
+            event.preventDefault();
+
+        } else if(event.key == 'ArrowUp' && font_size>80){
+            p.textContent='💥' 
+            window.removeEventListener("keydown", x);
+        } 
+        else if (event.key == 'ArrowDown' && font_size<80) {
+            font_size=(font_size*0.9)
+            p.style.fontSize=font_size+'px';     
+            event.preventDefault();
+        } 
+      });
+</script>
+</body>
+</html>

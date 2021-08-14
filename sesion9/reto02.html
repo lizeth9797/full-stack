@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Reto 2: Crear una tabla</title>
+  </head>
+  <body>
+    <h1>Mountains</h1>
+
+    <div id="mountains"></div>
+   <!--  <table>
+        <tr>
+          <th>Name</th>
+          <th>Height</th>
+          <th>Place</th>
+        </tr>
+        <tr>
+          <td>Kilimanjaro</td>
+          <td>5895</td>
+          <td>Tanzania</td>
+        </tr>
+      </table> -->
+
+
+    <script>
+      const data = [
+        {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+        {name: "Everest", height: 8848, place: "Nepal"},
+        {name: "Mount Fuji", height: 3776, place: "Japan"},
+        {name: "Vaalserberg", height: 323, place: "Netherlands"},
+        {name: "Denali", height: 6168, place: "United States"},
+        {name: "Popocatepetl", height: 5465, place: "Mexico"},
+        {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+      ];
+
+      console.log(data[0])
+
+      let w=document.createElement('table')
+      let x=document.createElement('tr')
+      let z=document.createElement('td')
+      let y=document.createTextNode('HOLA')
+      z.appendChild(y)
+      x.appendChild(z)
+
+
+    </script>
+  </body>
+</html>
