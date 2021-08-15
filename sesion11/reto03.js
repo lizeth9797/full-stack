@@ -1,6 +1,7 @@
 /* -------------
 RETO 03
 ----------------
+Completar la función triggerActions que pasa un callback a processAction para producir el siguiente resultado:
 Se debe mostrar el mensaje n cantidad de veces, determinado por triggerActions. Tomar en cuenta que no se debe modificar la función processAction.
 */ 
 
@@ -10,19 +11,8 @@ const processAction = (i, callback) => {
   }, Math.random()*1000);
 }
 
-  const triggerActions = (count) => {
-  const promises = [];
-  const generatePromise = (i) => {
-    return new Promise((resolve) => {
-      processAction(i, resolve);
-    });
-  }
-  for (let i = 1; i <= count; i += 1) {
-    promises.push(generatePromise(i));
-  }
-  Promise.all(promises)
-    .then((strings) =>
-      strings.forEach((string) => console.log(string)));
+const triggerActions = (count) => {
+  // Code goes here
 }
 
 triggerActions(10);
