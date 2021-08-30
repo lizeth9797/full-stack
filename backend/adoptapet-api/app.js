@@ -1,5 +1,8 @@
 const express = require('express');  //importa biblioteca express que permite generar APIs
 const app = express(); //definir una constante inicializada como un objeto de express
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 const PORT = 4001;
@@ -119,3 +122,38 @@ estrella mas brillante */
       res.status(404).send('Constellation Not Found 😫');
     }
   })
+
+
+ //Ejemplo 03
+
+ //servicio para modificar los dioses griegos
+ app.put('/gods/:name', (req,res) => {
+  const god = req.body;
+  gods[req.params.name] = god
+  res.send(gods);
+})
+
+app.post('/gods', (req, res) => {
+  const name = req.query.name
+  const newGod = req.body;
+  gods[name] = newGod;
+  res.status(200).send(gods);
+})
+
+app.delete('/gods/:name', (req, res) =>{
+  const name = req.params.name;
+  if (delete gods[name]){
+    res.send(gods)
+  } else {
+    res.status(500)
+  }
+})
+
+
+ /*  RETO 02
+Crea nuevos servicios dinámicos de búsqueda de constelaciones por:
+nombre
+abreviatura
+superficie
+número estrellas
+estrella mas brillante */
