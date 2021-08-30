@@ -19,7 +19,7 @@ res.send(gods);
 }); 
 
 //RETO 01
-const constelaciones=[
+const constelaciones=
 {
     Andromeda : {
 	abreviatura : 'And',
@@ -51,7 +51,7 @@ const constelaciones=[
 	num_estrellas : 1350,
 	estr_mas_brillante : 'FSWR' 
     }
-}];
+};
 
 app.get('/constelaciones', (req, res, next) => {
     res.send(constelaciones);
@@ -93,16 +93,29 @@ número estrellas
 estrella mas brillante */
 
 
+ function searchConst(value){
+  const array=Object.keys(constelaciones)
+  let response;
+  for ( index in array){
+     let properties=Object.keys(constelaciones[array[index]])
+     for (i in properties){
+       let property=properties[i];
+         if((constelaciones[array[index]][property]) == value){
+         //console.log(array[index])
+         response=array[index]
+       }  
+     }
+  } 
+    return response;
+} 
 
+//searchConst('Sco')
 
   app.get('/constelaciones/:constName', (req, res) => {
-    const constName = constelaciones[req.params.constName];
-    if (constName) {
-      res.send(constName);
+    const constelacion = searchConst(req.params.constName)
+    if (constelacion) {
+      res.send(constelaciones[constelacion]);
     } else {
       res.status(404).send('Constellation Not Found 😫');
     }
-  });
-
-
-  console.log(constelaciones[0].Andromeda.abreviatura)
+  })
