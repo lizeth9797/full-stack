@@ -83,7 +83,16 @@ app.get('/gods', (req, res, next) => {
     número estrellas
     estrella mas brillante */
     
-    
+    /*  Esto sólo filtrará constelaciones por nombre, no por valores de las propiedades en las constelaciones
+    app.get('/constelaciones/:constName', (req, res) => {
+      const constelacion = constelaciones[req.params.constName]
+      if (constelacion) {
+        res.send(constelacion);
+      } else {
+        res.status(404).send('Constellation Not Found 😫');
+      }
+    })
+  */
      function searchConst(value){
       const array=Object.keys(constelaciones)
       let response;
@@ -121,12 +130,12 @@ app.get('/gods', (req, res, next) => {
       res.send(gods);
     })
     
-    app.post('/gods', (req, res) => {
+/*     app.post('/gods', (req, res) => {
       const name = req.query.name
       const newGod = req.body;
       gods[name] = newGod;
       res.status(200).send(gods);
-    })
+    }) */
     
     app.delete('/gods/:name', (req, res) =>{
       const name = req.params.name;
@@ -146,12 +155,30 @@ app.get('/gods', (req, res, next) => {
     estrella mas brillante */
     
     app.put('/constelaciones/:constName', (req, res) => {
-      const constelacion = req.body
-      searchConst(req.params.constName)=constelacion
-      if (constelacion) {
-        res.send(constelaciones[constelacion]);
+      const constelacionUpdated=req.body
+      const constelacionName=constelaciones[req.params.constName]
+      constelaciones[req.params.constName]=constelacionUpdated
+       if (constelacionName) {
+        res.send(constelaciones)
       } else {
         res.status(404).send('Constellation Not Found 😫');
+      } 
+    }) 
+
+    app.post('/constelaciones', (req, res) => {
+      const name = req.query.name
+      const newConstelacion = req.body;
+      constelaciones[name] = newConstelacion;
+      res.status(200).send(constelaciones);
+    })
+
+    app.delete('/constelaciones/:name', (req, res) =>{
+      const name = req.params.name;
+      if (constelaciones[name]){
+        delete constelaciones[name]
+        res.send(constelaciones)
+      } else {
+        res.status(500).send('Sorry');
       }
     })
-    
+  

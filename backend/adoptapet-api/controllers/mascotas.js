@@ -10,11 +10,11 @@ function crearMascota(req,res){
 function obtenerMascota(req,res){
     var mascota1 = new Mascota(1001, 'Tommy', 'perro', 'url', 'Cabeza de venado', 'Karina','Mexico')
     var mascota2 = new Mascota(2002, 'Poncho', 'gato', 'url', 'con rayas','Romina','NYC')
-    res.status(200).send(mascota1,mascota2)
+    res.status(200).send([mascota1,mascota2])
 }
 
 function modificarMascota(req,res){
-    var mascota=new Mascota(req.params.id, 'Tommy', 'perro', 'url', 'Cabeza de venado', 'Karina','Mexico')
+    var mascota=new Mascota(req.params.id, 'Tommy', 'perro', 'url', 'Cabeza de venado', 'Karinaa','Mexico')
     var edit=req.body
     mascota={...mascota,...edit}
     res.send(mascota)

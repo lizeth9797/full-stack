@@ -13,7 +13,7 @@ function obtenerSolicitudes(req, res) {
     let solicitud2 = new Solicitud(2, 2, '30/08/21', 1, 2, 'pendiente')
     res.send([solicitud1, solicitud2])
   }
-}
+
 
 function modificarSolicitud(req,res){
     var solicitud = new Solicitud(req.params.id, 1,'25/08/21', 1, 2, 'aprobada')
@@ -23,7 +23,7 @@ function modificarSolicitud(req,res){
 }
 
 function eliminarSolicitud(req,res){
-    res.status(200).send('La solicitud ${req.params.id} se ha eliminado');
+    res.status(200).send(`La solicitud ${req.params.id} se ha eliminado`);
 }
 
 module.exports = {

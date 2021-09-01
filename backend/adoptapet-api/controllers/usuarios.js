@@ -11,7 +11,7 @@ function crearUsuario(req,res){
 function obtenerUsuario(req,res){
     var usuario1 = new Usuario(1, 'Juanix', 'Juan', 'Vega', 'juan@vega.com', '123','normal')
     var usuario2 = new Usuario(2, 'Monse', 'Monserrat', 'Vega', 'mon@vega.com','asdf', 'anunciante')
-    res.status(200).send(usuario1,usuario2)
+    res.status(200).send([usuario1,usuario2])
 }
 
 function modificarUsuario(req,res){
