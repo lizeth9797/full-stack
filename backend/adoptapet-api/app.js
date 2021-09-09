@@ -9,8 +9,10 @@ app.use(bodyParser.json());
 //Configuración de la base de datos
 const mongoose = require('mongoose');
 mongoose.connect("mongodb+srv://admin:Passw0rd@cluster0.xxifa.mongodb.net/Adoptpet?retryWrites=true&w=majority"); //indicar a qué BD del clúster debe acceder
-mongoose.set("debug".true)//activación de la función debug
-
+mongoose.set("debug",true)//activación de la función debug
+require('./models/Mascota')
+require('./models/Usuario')
+require('./models/Solicitud')
 
 app.use('/v1',require('./routes'));
 

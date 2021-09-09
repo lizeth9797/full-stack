@@ -1,4 +1,4 @@
-class Mascota{
+/* class Mascota{
     constructor(id,nombre,categoria,foto,descripcion,anunciante,ubicacion){
         this.id=id
         this.nombre=nombre
@@ -11,3 +11,29 @@ class Mascota{
 }
 
 module.exports=Mascota;
+ */
+
+ const mongoose=require('mongoose');
+
+ const MascotaSchema=new mongoose.Schema({
+     nombre:{type:String, required:true}, //con required le indicamos que es un campo obligatorio
+     categoria:{type:String, enum: ['Perro', 'Gato', 'Otro']}, //aqui sólo va a permitir esas 3 categorías
+     fotos:String,
+     descripcion:{type:String, required:true},
+     anunciante:{type:mongoose.Schema.Types.ObjectId,ref:'Usuario'}, //se hace una referencia a los usuarios que ya existen en la BD
+     ubicacion:String
+ }, {collection:'Mascotas', timestamps:true})
+
+ MascotaSchema.methods.publicData=()=>{
+    return {
+        id: this.id,
+        nombre: this.nombre,
+        categoria: this.categoria,
+        fotos: this.fotos,
+        descripcion: this.descripcion,
+        anunciante: this.anunciante,
+        ubicacion: this.ubicacion
+    }
+}
+
+ mongoose.model("Mascota",MascotaSchema)
