@@ -24,7 +24,7 @@ module.exports=Mascota;
      ubicacion:String
  }, {collection:'Mascotas', timestamps:true})
 
- MascotaSchema.methods.publicData=()=>{
+ MascotaSchema.methods.publicData=()=>{  //no como arrow sino como funcion para que ya no de errores
     return {
         id: this.id,
         nombre: this.nombre,

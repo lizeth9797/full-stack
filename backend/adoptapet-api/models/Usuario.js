@@ -25,7 +25,7 @@ module.exports=Usuario;
  }, {collection: "Usuarios", timestamps:true});  //colocar el nombre exacto de la colección en Compass, timestamp es útil para que quede un registro de en qué momento se modifica un dato
 
  UsuarioSchema.methods.pubclicData=()=>{ //En este método se define la información publica, i.e cualquiera puede tener acceso a esta info de los usuarios
-     return{
+     return{                                    //no como arrow sino como funcion para que ya no de errores
          id: this.id,
          username: this.username,
          nombre: this.nombre,
