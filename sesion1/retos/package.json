@@ -1,0 +1,22 @@
+{
+  "name": "reto01",
+  "version": "0.0.1",
+  "description": "Reto01",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "keywords": [
+    "reto01",
+    "challenge"
+  ],
+  "author": "Kari",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
